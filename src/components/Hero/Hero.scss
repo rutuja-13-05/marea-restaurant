@@ -1,0 +1,400 @@
+.hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  color: #f5f1e8;
+
+  // --------------------------------
+  // BACKGROUND
+  // --------------------------------
+
+  &__background {
+    position: absolute;
+    inset: 0;
+
+    z-index: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+
+      animation: heroZoom 12s ease-out forwards;
+    }
+  }
+
+  // --------------------------------
+  // DARK OVERLAY
+  // --------------------------------
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(20, 16, 13, 0.82) 0%,
+        rgba(20, 16, 13, 0.55) 45%,
+        rgba(20, 16, 13, 0.25) 100%
+      );
+  }
+
+  // --------------------------------
+  // CONTENT
+  // --------------------------------
+
+  &__container {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 150px 5% 120px;
+  }
+
+  &__content {
+    max-width: 760px;
+  }
+
+  // --------------------------------
+  // EYEBROW
+  // --------------------------------
+
+  &__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    opacity: 0.85;
+
+    &::before {
+      content: '';
+
+      width: 38px;
+      height: 1px;
+
+      background: #f5f1e8;
+    }
+  }
+
+  // --------------------------------
+  // TITLE
+  // --------------------------------
+
+  &__title {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(58px, 7vw, 108px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    letter-spacing: -2px;
+
+    span {
+      display: block;
+
+      font-style: italic;
+
+      margin-left: 70px;
+    }
+  }
+
+  // --------------------------------
+  // DESCRIPTION
+  // --------------------------------
+
+  &__description {
+    max-width: 480px;
+
+    margin-top: 32px;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: rgba(245, 241, 232, 0.82);
+  }
+
+  // --------------------------------
+  // BUTTONS
+  // --------------------------------
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-top: 38px;
+  }
+
+  &__primary-button,
+  &__secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 50px;
+
+    padding: 0 22px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    transition:
+      background 0.3s ease,
+      color 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  &__primary-button {
+    gap: 9px;
+
+    background: #f5f1e8;
+    color: #1d1a17;
+
+    svg {
+      font-size: 17px;
+    }
+
+    &:hover {
+      background: #ffffff;
+      transform: translateY(-3px);
+    }
+  }
+
+  &__secondary-button {
+    border: 1px solid rgba(245, 241, 232, 0.55);
+
+    color: #f5f1e8;
+
+    &:hover {
+      background: rgba(245, 241, 232, 0.12);
+
+      border-color: #f5f1e8;
+
+      transform: translateY(-3px);
+    }
+  }
+
+  // --------------------------------
+  // BOTTOM AREA
+  // --------------------------------
+
+  &__bottom {
+    position: absolute;
+
+    z-index: 2;
+
+    left: 5%;
+    right: 5%;
+    bottom: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    opacity: 0.8;
+
+    span {
+      width: 7px;
+      height: 7px;
+
+      border: 1px solid #f5f1e8;
+      border-radius: 50%;
+    }
+  }
+
+  &__scroll {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    opacity: 0.8;
+
+    transition: opacity 0.3s ease;
+
+    svg {
+      font-size: 16px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+
+// ========================================
+// HERO IMAGE ANIMATION
+// ========================================
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.06);
+  }
+}
+
+
+// ========================================
+// TABLET
+// ========================================
+
+@media (max-width: 768px) {
+
+  .hero {
+
+    &__container {
+      padding: 150px 7% 120px;
+    }
+
+    &__title {
+      font-size: clamp(52px, 12vw, 82px);
+
+      span {
+        margin-left: 25px;
+      }
+    }
+
+    &__description {
+      max-width: 420px;
+
+      font-size: 15px;
+    }
+
+    &__bottom {
+      left: 7%;
+      right: 7%;
+    }
+  }
+}
+
+
+// ========================================
+// MOBILE
+// ========================================
+
+@media (max-width: 520px) {
+
+  .hero {
+
+    min-height: 100svh;
+
+    &__overlay {
+      background:
+        linear-gradient(
+          180deg,
+          rgba(20, 16, 13, 0.55) 0%,
+          rgba(20, 16, 13, 0.75) 100%
+        );
+    }
+
+    &__container {
+      padding: 140px 22px 130px;
+    }
+
+    &__eyebrow {
+      font-size: 9px;
+
+      letter-spacing: 2px;
+
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      font-size: clamp(48px, 14vw, 68px);
+
+      letter-spacing: -1px;
+
+      span {
+        margin-left: 15px;
+      }
+    }
+
+    &__description {
+      margin-top: 25px;
+
+      font-size: 14px;
+
+      line-height: 1.6;
+    }
+
+    &__actions {
+      flex-direction: column;
+      align-items: stretch;
+
+      margin-top: 30px;
+
+      max-width: 280px;
+    }
+
+    &__primary-button,
+    &__secondary-button {
+      width: 100%;
+    }
+
+    &__bottom {
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+    }
+
+    &__location {
+      font-size: 9px;
+    }
+
+    &__scroll {
+      font-size: 0;
+
+      svg {
+        font-size: 18px;
+      }
+    }
+  }
+}
