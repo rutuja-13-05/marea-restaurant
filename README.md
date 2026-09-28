@@ -1,16 +1,109 @@
-# React + Vite
+# Marea — Restaurant Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Contemporary Indian Restaurant Website (Frontend Project)**
 
-Currently, two official plugins are available:
+Marea is a modern restaurant website designed to create a warm, elegant and immersive digital experience for a contemporary Indian restaurant.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The project focuses on a visually engaging layout, responsive design, reusable React components and a clean section-based architecture.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- Responsive restaurant landing page
+- Modern navigation bar
+- Full-screen hero section
+- Restaurant introduction / About section
+- Food menu showcase
+- Image-based gallery
+- Table reservation section
+- Contact section
+- Responsive layout for desktop, tablet and mobile
+- Reusable React components
+- SCSS-based styling
+- Restaurant-focused visual design
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React
+- JavaScript
+- HTML5
+- SCSS
+- React Icons
+
+### Development Tools
+
+- Vite
+- ESLint
+- Git
+- GitHub
+- VS Code
+
+---
+
+## 📂 Project Structure
+
+```text
+marea-restaurant/
+│
+├── public/
+│   ├── favicon.svg
+│   └── icons.svg
+│
+├── src/
+│   │
+│   ├── assets/
+│   │   ├── about.png
+│   │   ├── hero.png
+│   │   ├── menu.jpg
+│   │   ├── butterchicken.jpg
+│   │   ├── cardeam.jpg
+│   │   ├── daltadka.jpg
+│   │   ├── mereachaat.jpg
+│   │   ├── smokepaneer.jpg
+│   │   └── ...
+│   │
+│   ├── components/
+│   │   │
+│   │   ├── Navbar/
+│   │   │   ├── Navbar.jsx
+│   │   │   └── Navbar.scss
+│   │   │
+│   │   ├── Hero/
+│   │   │   ├── Hero.jsx
+│   │   │   └── Hero.scss
+│   │   │
+│   │   ├── About/
+│   │   │   ├── About.jsx
+│   │   │   └── About.scss
+│   │   │
+│   │   ├── Menu/
+│   │   │   ├── Menu.jsx
+│   │   │   └── Menu.scss
+│   │   │
+│   │   ├── Gallery/
+│   │   │   ├── Gallery.jsx
+│   │   │   └── Gallery.scss
+│   │   │
+│   │   ├── Reservations/
+│   │   │   ├── Reservations.jsx
+│   │   │   └── Reservations.scss
+│   │   │
+│   │   └── Contact/
+│   │       ├── Contact.jsx
+│   │       └── Contact.scss
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.scss
+│
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+└── vite.config.js
